@@ -77,8 +77,7 @@ dataset_val.prepare()
 
 # Configure the model for training
 config = DigitConfig()
-model = modellib.MaskRCNN(mode="training", config=config, model_dir="./")
-
+model = modellib.MaskRCNN(mode="training", config=config, model_dir="./") 
 # Load weights - either COCO weights or pretrained weights from your own model
 COCO_WEIGHTS_PATH = "path/to/mask_rcnn_coco.h5"  # Change if using pretrained weights
 model.load_weights(COCO_WEIGHTS_PATH, by_name=True, 
